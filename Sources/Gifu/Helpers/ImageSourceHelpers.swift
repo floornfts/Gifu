@@ -71,6 +71,14 @@ extension CGImageSource {
     let imageCount = CGImageSourceGetCount(self)
     return isTypeGIF != false && imageCount > 1
   }
+
+  /// Returns whether the image source contains a GIF.
+  ///
+  /// - returns: A boolean value that is `true` if the image source contains GIF data.
+  var isGIF: Bool {
+    let isTypeGIF = UTTypeConformsTo(CGImageSourceGetType(self) ?? "" as CFString, kUTTypeGIF)
+    return isTypeGIF != false
+  }
   
   /// Returns the GIF properties at a specific index.
   ///
