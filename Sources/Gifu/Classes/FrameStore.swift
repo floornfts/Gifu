@@ -80,7 +80,7 @@ class FrameStore {
 
   /// Is this image animatable?
   var isAnimatable: Bool {
-    return imageSource.isAnimatedGIF
+    return imageSource.isGIF
   }
 
   private let lock = NSLock()

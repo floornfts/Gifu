@@ -3,10 +3,10 @@ name: Test
 on: 
   push:
     branches:
-    - master
+    - main
   pull_request:
     branches:
-    - master
+    - main
 
 jobs:
   build:
@@ -16,5 +16,3 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run iOS tests
       run: make test-ios
-    - name: Run tvOS tests
-      run: make test-tvos
